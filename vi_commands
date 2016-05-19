@@ -1,0 +1,94 @@
+# Chapter 1:
+
+vi foo - open file named foo
+ZZ - write file and quit (:wq)
+:q! - quit without saving
+:e! - undo changes, return to last saved version
+:w! - overwrite existing file  
+:w foo - name file to foo
+:sh - create shell ('exit' or CTRL-D to terminate)
+(in terminal: CTRL-Z to suspend running program, 'fg' to resume)
+/tmp or /usr/tmp or /var/tmp or same dir as file
+
+# Chapter 2:
+
+:set wm=10 - wrapmargin (insert br after 10 char)
+:set wm=0 - turn off wrapmargin
+:set nu - show line numbers
+
+## MOVE CURSOR:
+hjkl
+-0+ - first char of previous/current/next line
+$ - end of line
+wb - beginning of next/previous word (symbols and punctuation are words)
+WB - beginning of next/previous word (symbols and punctuation are NOT words)
+eE - end of word excluding/including punctuation
+bew - EXCLUDING symbols (punctuation IS separate word)
+BEW - INCLUDING symbols (punctuation IS NOT separate word)
+G - go to end of file
+42G - go to line 42
+
+## GO TO INSERT MODE:
+i - before cursor
+I - beginning of line
+a - after cursor
+A - end of current line ($a)
+o - open line below current line
+O - open line above current line
+s - delete char at cursor and enter (substitute) text (cSPACE)
+S - delete line and enter (substitute) text (cc)
+R - overstrike char by char
+
+## EDIT TEXT:
+(command)(number)(text object) or (number)(command)(text object):
+c() - change
+cw c$- to the end of word/line
+c0 c2b - to the beginning of line/back two words
+    cc - change entire line
+    C - same as c$ (from current position)
+r - replace single char with single char (in normal mode)
+s - substitute 1 char by any number of char
+3s - substitute 3 characters by n char
+S 3S - substitute (3) whole line(s)
+R - overstrike mode (ESC to finish) - max 1 line
+~ - change case of one char
+
+d() - delete (and put text to buffer)
+dw - delete to the next word
+de - delete to the end of current word
+dE - delete to the end of current word INCLUDING punctuation
+    dd 2dd - delete (two) entire line(s)
+    D - same as d$ (from current pos to end of line)
+x 5x - del one/five char (current position)
+X - del one char (BEFORE cursor)
+
+## MOVE TEXT:
+p - put text from buffer AFTER the cursor (next line)
+P - put text from buffer BEFORE the cursor (previous line)
+xp - swap (transpose) two letters
+y() - yank/copy text (to buffer)
+yw y$ 4yy
+yy Y - copy entire line
+y1 yh - copy single char
+5y1 - copy 5 char
+
+## REPEAT/UNDO COMMAND:
+. - repeat last command (problematic with old vi version)
+u - undo the last command
+uu - undo the undo (go to the location of last edit)(toggle 2 versions)
+U - undo all edits to a line (as long as the cursor remains on that line!!!)
+CTRL-R - redo
+
+'n' i I a A () ESC - type chars n times
+25a*-ESC - types *- 25 times (50 chars in total)
+50i*ESC - types 50 *s
+'n' r '*' - replaces n characters by n *s
+2r& - replace two characters by &&
+'n' s - best use to change a few char inside a word, usually same as R
+ea - append to the end of word
+
+J 3J - join current line with next line(s)
+
+# Chapter 3
+
+
