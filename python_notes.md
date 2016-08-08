@@ -1,6 +1,6 @@
 # Week 3 (self study) 9-15 May 2016
 
-----------------------------------
+----
 
 [source](http://blog.trinket.io/why-python/)
 
@@ -30,7 +30,7 @@
 - `id(variable)`: the unique ID number of the object the variable is ponting to
 - variable/identifier name can be [a-zA-z0-9_], but first char can not be [0-9]
 - keywords:
-  ```
+  ```python3
   and, as, assert, break, class, continue, def, del, elif, else, except, False, finally, for, from, global, if, import, in, is, lambda, None, nonlocal, not, or, pass, raise, return, True, try, while, with, yield
   ```
 
@@ -68,6 +68,7 @@
 - __floating-point__: for example: `42.11`, `3.1415e-10`, accurate only up to 15 decimals
 - __complex__: `<real part> + <imaginary part>j`
 - integer division `10/3` is floor division in Python2 but true division in Python3 where `10//3` is floor division (truncating fractional digits)
+
 ### Strings
 - `s = 'It doesn\'t matter!'` OR `"He said: \"It doesn't matter\""`
 - `s = '''multiple line string'''` OR `s = """multiple line string"""`
